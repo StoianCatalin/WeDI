@@ -193,32 +193,39 @@ header h2 {
     transition: all .3s ease;
     position: relative;
 }
+
 .container h2 {
     margin: 10px;
 }
+
 .container .data .item {
     width: 100%;
     padding: 10px;
 }
+
 .container .data .item span {
     margin-bottom: 5px;
     font-weight: bold;
     display: block;
     cursor: pointer;
 }
+
 .container .data .item ul {
     list-style: none;
     height: 120px;
     overflow-y: scroll;
     border: 1px solid #bcbdbc;
 }
+
 .container .data .item ul li:nth-of-type(odd) {
     background: #efefef;
 }
+
 .container .data .item ul li {
     height: 15px;
     padding: 0 15px;
 }
+
 .container .statistics .row {
     width: 100%;
     padding: 5px 20px;
@@ -226,15 +233,19 @@ header h2 {
     border-bottom: 1px solid #d8d8d8;
     border-top: 1px solid #d8d8d8;
 }
+
 .left {
     float: left;
 }
+
 .right {
     float: right;
 }
+
 .clearfloat {
-    clear:both;
+    clear: both;
 }
+
 .container .export .options {
     width: 100%;
     display: flex;
@@ -243,10 +254,12 @@ header h2 {
     padding: 0 20px 20px 20px;
     border-bottom: 1px solid #d8d8d8;
 }
+
 .container .export .type {
     margin-top: 25px;
     padding: 0 20px;
 }
+
 .container .export .export-button {
     width: 150px;
     height: 40px;
@@ -260,6 +273,38 @@ header h2 {
     font-size: 14px;
     cursor: pointer;
 }
+
 .container .export .export-button:hover {
     background: #49cc8a;
+}
+
+.container .import {
+    text-align: center;
+    font-size: 14px;
+}
+
+.container .import p {
+    text-align: center;
+}
+
+.container .import code {
+    text-align: center;
+    background: #f8ffb5;
+}
+
+.container .import .import-button {
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    background: #9e2a2a;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.container .import .import-button:hover {
+    background: #ea4444;
 }
