@@ -7,8 +7,98 @@
 html, body {
     width: 100%;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background: #000;
+    width: 600px;
+    height: 600px;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #f2f2f2;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #d8d8d8;
+}
+header img {
+    width: 30px;
+    height: auto;
+    position:relative;
+    top: 8px;
+}
+header h2 {
+    font-size: 20px;
+    display: inline;
+}
+.recording-controllers {
+    width: 100%;
+    height: 50px;
+    background: #282828;
+    color: #fff;
+    position: relative;
+    line-height: 50px;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+.lbl {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: #898989;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lbl:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+}
+
+.lbl:active:after {
+    transform: scale(1.15, 0.85);
+}
+
+.cbx:checked ~ label {
+    background: #ea4444;
+}
+
+.cbx:checked ~ label:after {
+    left: 20px;
+    background: #9e2a2a;
+}
+
+.cbx:disabled ~ label {
+    background: #d5d5d5;
+    pointer-events: none;
+}
+
+.cbx:disabled ~ label:after {
+    background: #bcbdbc;
+}
+.cntr {
+    position:absolute;
+    right: 30px;
+    top: 15px;
+}
+
+.press {
+    margin-bottom: 40px;
+}
+
+.hidden {
+    display: none;
 }
