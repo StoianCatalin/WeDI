@@ -193,7 +193,7 @@ header h2 {
     transition: all .3s ease;
     position: relative;
 }
-.container .data h2 {
+.container h2 {
     margin: 10px;
 }
 .container .data .item {
@@ -218,4 +218,20 @@ header h2 {
 .container .data .item ul li {
     height: 15px;
     padding: 0 15px;
+}
+.container .statistics .row {
+    width: 100%;
+    padding: 5px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearfloat {
+    clear:both;
 }
