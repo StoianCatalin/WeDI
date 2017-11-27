@@ -226,7 +226,7 @@ header h2 {
     padding: 0 15px;
 }
 
-.container .statistics .row {
+.container .statistics .row, .container .settings .row {
     width: 100%;
     padding: 5px 20px;
     font-size: 14px;
@@ -306,5 +306,26 @@ header h2 {
 }
 
 .container .import .import-button:hover {
+    background: #ea4444;
+}
+
+.container .settings p {
+    margin: 10px;
+}
+
+.container .settings .save-button {
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    background: #9e2a2a;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.container .settings .save-button:hover {
     background: #ea4444;
 }

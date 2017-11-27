@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">WeDI</div>
+      </div>
+      <h1>Scholarly HTML</h1>
+    </header>
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          Stoian Ioan-Catalin
+          &amp;
+          <a href="https://github.com/StoianCatalin">Github</a>,
+        </dd>
+        <dd>
+          Urse Daniel
+          &amp;
+          <a href="https://github.com/ursedaniel">Github</a>,
+        </dd>
+        <dd>
+          Alexandrescu Aurelian
+          &amp;
+          <a href="https://github.com/goldlekx">Github</a>,
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2>Introducere</h2>
+      <p>
+        Să se implementeze o extensie pentru navigator sau o componentă Web capabilă să interpreteze şi să ofere reprezentări structurate – ce pot fi exportate sub formă de HTML şi JSON incluzând scheme de microdate HTML5 – a unor (tipuri de) date incluse într-o pagină Web: numere de telefon, adrese poştale şi de e-mail, unităţi de timp, nume/categorii de resurse (imagini, melodii, filme), adrese Web (URL-uri date ca text sau drept cod QR), profil de utilizator (e.g., având cont public oferit de aplicaţii sociale ca Facebook, Reddit, Twitter etc.), coordonate geografice şi altele. Viitoare detectoare de formate vor putea fi incluse via extensii – se vor oferi, pentru început, minim 3.
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <!-- review? -->
+      <h2>Interfata</h2>
+      <img src="logo.png" alt="Interface" />
+      <p>Designul se bazeaza pe principiile Material, folosind 2 culori principale (<span style="color:#37a36c">verde</span> avand hexacodul #37a36c si <span style="color: #9e2a2a;">rosu</span> avand hexacodul #9e2a2a)</p>
+      <p>De asemenea se folosesc nonculori si derivate a celor 2 culori principale specificate mai sus.</p>
+      <p></p>
+    </section>
+    <section id="structure">
+      <!-- review? -->
+      <h2>Structura</h2>
+      <p>
+        WeDI este o extensie ce isi propune sa colecteze date intr-o maniera foarte usor de implementat.
+      </p>
+      <section id="Root">
+        <!-- review? -->
+        <h3>Fisiere HTML</h3>
+        <p>
+          Fisierele html trebuie encodate cu UTF-8, trebuie sa contina titlu si metadate. De asemenea se cere o indentare cat mai precisa. Fisierele html nu au voie sa contina comentarii si trebui sa respecte in totalitate regulile de la W3.
+        </p>
+        <h3>CSS Files</h3>
+        <p>
+          Fisierele css trebuie sa fie cat mai structurate si compacte, se incearca sa se scrie cat mai putin cod si sa fie utilizat in cat mai multe locuri.
+        </p>
+        <h3>Fisierele JavaScript</h3>
+        <p>
+          Fisierele Javascript trebuie introduce la sfarsit de document. Ele vor fi perfect indentate, codul fiind scrie in cat mai multe functii unitare.
+        </p>
+      </section>
+      <section id="Body">
+        <!-- review? -->
+        <h3>Wireframe-uri</h3>
+        <img style="width: 100%;" src="wireframe1.png" alt="WireFrame1" />
+        <img style="width: 100%;" src="wireframe2.png" alt="WireFrame2" />
+      </section>
+    </section>
+  </body>
+</html>
