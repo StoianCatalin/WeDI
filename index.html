@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>WeDI</title>
-    <link rel="stylesheet" href="./style/font-awesome.min.css" />
-    <link rel="stylesheet" href="./style/styles.css" />
+    <link rel="stylesheet" href="./style/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./style/styles.css"/>
 </head>
 <body>
 <header>
-    <img src="resources/icon.png" alt="Logo" />
+    <img src="resources/icon.png" alt="Logo"/>
     <h2>WeDI</h2>
 </header>
 <section class="recording-controllers">
@@ -85,29 +85,15 @@
         </div>
         <div class="content">
             <h2>Export</h2>
-            <div class="options">
-                <span>
-                <input type="checkbox" value="Email" />
-                <label>Email</label>
-            </span>
-                <span>
-                <input type="checkbox" value="phone" />
-                <label>Phone number</label>
-            </span>
-                <span>
-                <input type="checkbox" value="Address" />
-                <label>Address</label>
-            </span>
-            </div>
+            <div class="options" id="widi-options"></div>
             <div class="type left">
                 <span>Exported format</span>
-                <select>
-                    <option>XML</option>
-                    <option>JSON</option>
-                    <option>EXCEL</option>
+                <select id="widi-format">
+                    <option value="html">HTML</option>
+                    <option value="json">JSON</option>
                 </select>
             </div>
-            <div class="export-button right">
+            <div class="export-button right" id="startFormat">
                 <i class="fa fa-download" aria-hidden="true"></i>
                 Export
             </div>
@@ -126,20 +112,20 @@
             <p>To import, you must have a .json file containing:</p>
             <code>
                 {
-                    "icon": "example",
-                    "name": "Value",
-                    "key": "Unique value",
-                    "algorithm": "function(param) {...}"
+                "icon": "example",
+                "name": "Value",
+                "key": "Unique value",
+                "algorithm": "function(param) {...}"
                 }
             </code>
             <p>Icon: FontAwesome icon (eg: <b>fa-cog</b>)</p>
             <p>Name: Name of plugin (eg: <b>Email</b>)</p>
             <p>key: Unique value of plugin (eg: <b>email</b>)</p>
-            <p>Algorithms: A string which represent a javascript<br /> function which take 1 parameter and return a json
-            <br />The param will have the next form: {url: string, text: string}
+            <p>Algorithms: A string which represent a javascript<br/> function which take 1 parameter and return a json
+                <br/>The param will have the next form: {url: string, text: string}
             </p>
-            <br />
-            <input type='file' id='fileinput' >
+            <br/>
+            <input type='file' id='fileinput'>
             <div class="import-button" id="import-button">
                 <i class="fa fa-upload" aria-hidden="true"></i>
                 Import
@@ -156,9 +142,7 @@
         <div class="content">
             <h2>Settings</h2>
             <p>Select what you want to record</p>
-            <div id="extensions">
-
-            </div>
+            <div id="extensions"></div>
         </div>
     </div>
 </section>
@@ -169,5 +153,6 @@
 <script src="js/settings.js"></script>
 <script src="js/show-data.js"></script>
 <script src="js/statistics.js"></script>
+<script src="js/export-data.js"></script>
 </body>
 </html>
