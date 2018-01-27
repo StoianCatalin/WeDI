@@ -13,16 +13,12 @@
 
     function parseExtensions(extensions) {
         if (extensions) {
-            console.log(extensions);
             localExtensions = extensions;
             var domExtensions = document.getElementById('extensions');
             extensions.forEach(function (extension) {
                 var domEl = document.getElementById('extension-' + extension.key);
                 if (domEl) {
-                    var node = domEl.querySelector('#' + extension.key);
-                    node.innerHTML = '<div class="row" id="extension-'+extension.key+'">' +
-                        '<span><input type="checkbox" id="' + extension.key + '" /></span><span> ' + extension.name + '</span>' +
-                        '</div>'
+                    domEl.innerHTML = '<span><input type="checkbox" id="' + extension.key + '" /></span><span> ' + extension.name + '</span>';
                 } else {
                     var item = '<div class="row" id="extension-'+extension.key+'">' +
                         '<span><input type="checkbox" id="' + extension.key + '" /></span><span> ' + extension.name + '</span>' +

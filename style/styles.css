@@ -224,6 +224,17 @@ header h2 {
 .container .data .item ul li {
     height: 15px;
     padding: 0 15px;
+    display: flex;
+    text-align: left;
+}
+
+.container .data .item ul li div {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    width: 0;
 }
 
 .container .statistics .row, .container .settings .row {

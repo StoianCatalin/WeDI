@@ -20,7 +20,12 @@
       "http://*/*",
       "https://*/*"
     ],
-    "js": ["js/scripts/content.js"]
+    "js": ["js/scripts/content.js"],
+    "exclude_matches": [
+      "*://mail.google.com/*",
+      "*://*.google.com/*",
+      "*://*.google.ro/*"
+    ]
   }],
   "background": {
     "scripts": ["js/scripts/background.js"],
