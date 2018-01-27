@@ -14,7 +14,8 @@
     <h2>WeDI</h2>
 </header>
 <section class="recording-controllers">
-    Not recording
+    <span id="not-recording-text">Not recording</span>
+    <span id="recording-text">Recording...</span>
     <div class="cntr">
         <div class="row press">
             <input type="checkbox" id="unchecked" class="cbx hidden"/>
@@ -148,14 +149,20 @@
             <code>
                 {
                     "icon": "example",
-                    "key": "value",
-                    "name": "Value"
+                    "name": "Value",
+                    "key": "Unique value",
+                    "algorithm": "function(param) {...}"
                 }
             </code>
             <p>Icon: FontAwesome icon (eg: <b>fa-cog</b>)</p>
-            <p>Key: Tag (eg: <b>&lt;email&gt;</b>)</p>
             <p>Name: Name of plugin (eg: <b>Email</b>)</p>
-            <div class="import-button">
+            <p>key: Unique value of plugin (eg: <b>email</b>)</p>
+            <p>Algorithms: A string which represent a javascript<br /> function which take 1 parameter and return a json
+            <br />The param will have the next form: {url: string, text: string}
+            </p>
+            <br />
+            <input type='file' id='fileinput' >
+            <div class="import-button" id="import-button">
                 <i class="fa fa-upload" aria-hidden="true"></i>
                 Import
             </div>
@@ -171,26 +178,16 @@
         <div class="content">
             <h2>Settings</h2>
             <p>Select what you want to record</p>
-            <div class="row">
-                <span><input type="checkbox" /></span>
-                <span> Email</span>
-            </div>
-            <div class="row">
-                <span><input type="checkbox" /></span>
-                <span> Phone numbers</span>
-            </div>
-            <div class="row">
-                <span><input type="checkbox" /></span>
-                <span> Address</span>
-            </div>
-            <div class="save-button">
-                <i class="fa fa-save" aria-hidden="true"></i>
-                Save
+            <div id="extensions">
+
             </div>
         </div>
     </div>
 </section>
 
 <script src="js/htmlbehavior.js"></script>
+<script src="js/recording-data.js"></script>
+<script src="js/import-extension.js"></script>
+<script src="js/settings.js"></script>
 </body>
 </html>

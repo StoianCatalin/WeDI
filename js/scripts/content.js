@@ -1,0 +1,1 @@
+chrome.runtime.sendMessage({pageContent: document.body.innerHTML, url: window.location.href, title: document.title}, function(response) {});

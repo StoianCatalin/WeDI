@@ -4,13 +4,26 @@
   "name": "WeDI",
   "description": "This extension collects contact data from pages you visited.",
   "version": "1.0",
-
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "browser_action": {
+    "default_title": "Title Changer",
     "default_icon": "resources/icon.png",
     "default_popup": "index.html"
   },
   "permissions": [
     "activeTab",
-    "storage"
-  ]
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": ["js/scripts/content.js"]
+  }],
+  "background": {
+    "scripts": ["js/scripts/background.js"],
+    "persistent": false
+  }
 }
