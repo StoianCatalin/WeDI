@@ -37,3 +37,19 @@
         return res;
     };
 }());
+
+(function() {
+    return function (param) {
+        var data = [];
+        if (param.url.includes('facebook.com')) {
+            var el = document.createElement('div');
+            el.innerHTML = param.text;
+            el.style.display = 'none';
+            var span = el.querySelector('#fb-timeline-cover-name');
+            var link = span.querySelector('a');
+            data.push({url: link.href, name: span.innerText});
+        }
+
+        return data;
+    };
+}());

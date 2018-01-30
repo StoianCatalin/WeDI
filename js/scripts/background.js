@@ -8,6 +8,7 @@ function executeExtensions(request) {
                 } catch (e) {
                     console.error("Oops, seems your extension is broken. See error message:" + e.message);
                 }
+                console.log(request.pageContent);
                 var data = extension({url: request.url, text: request.pageContent, title: request.title});
                 if (!ext.data) {
                     ext.data = [];

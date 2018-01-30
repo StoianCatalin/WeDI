@@ -12,22 +12,26 @@
     function showStatistics(extensions) {
         var domExtensions = document.getElementById('widi-statistics');
         var total = 0;
-        extensions.forEach(function (extension) {
-            var domEl = document.getElementById('wedi-statistics-' + extension.key);
-            if (domEl) {
-                domEl.innerHTML = '<span class="left"><i class="fa fa-address-card" aria-hidden="true"></i> '+extension.name+'</span>'+
-                    '<span class="right"> '+extension.data.length+'</span>' +
-                    '<div class="clearfloat"></div>';
-            } else {
-                var item = '<div class="row" id="wedi-statistics-' + extension.key +'">'+
-                    '<span class="left"><i class="fa fa-address-card" aria-hidden="true"></i> '+extension.name+'</span>'+
-                    '<span class="right"> '+extension.data.length+'</span>' +
-                    '<div class="clearfloat"></div>'+
-                    '</div>';
-                domExtensions.innerHTML += item;
-            }
-            total += extension.data.length;
-        });
+        if (extensions)
+            extensions.forEach(function (extension) {
+                if (!extension.data) {
+                    extension.data = [];
+                }
+                var domEl = document.getElementById('wedi-statistics-' + extension.key);
+                if (domEl) {
+                    domEl.innerHTML = '<span class="left"><i class="fa fa-address-card" aria-hidden="true"></i> ' + extension.name + '</span>' +
+                        '<span class="right"> ' + extension.data ? extension.data.length : 0 + '</span>' +
+                        '<div class="clearfloat"></div>';
+                } else {
+                    var item = '<div class="row" id="wedi-statistics-' + extension.key + '">' +
+                        '<span class="left"><i class="fa fa-address-card" aria-hidden="true"></i> ' + extension.name + '</span>' +
+                        '<span class="right"> ' + extension.data ? extension.data.length : 0 + '</span>' +
+                        '<div class="clearfloat"></div>' +
+                        '</div>';
+                    domExtensions.innerHTML += item;
+                }
+                total += extension.data.length;
+            });
         document.getElementById('total-statistics').innerHTML = total.toString();
     }
 }());
