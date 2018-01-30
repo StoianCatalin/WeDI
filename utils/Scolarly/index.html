@@ -75,6 +75,34 @@
         <img style="width: 100%;" src="wireframe1.png" alt="WireFrame1" />
         <img style="width: 100%;" src="wireframe2.png" alt="WireFrame2" />
       </section>
+
+      <section id="Api">
+        <!-- review? -->
+        <h3>Chrome API</h3>
+        <p>
+          Pentru extensia Chrome am folosit API-ul de la Google Chrome (storage, content-script, active-tab).
+        </p>
+        <p>
+          Plugin-urile pentru extensie sunt reprezentate de JSONS, avand urmatorul format: <br/>
+          <code>
+            { "icon": "example", "name": "Value", "key": "Unique value", "algorithm": "function(param) {...}" }
+          </code>
+        </p>
+        <p>
+          Icon = cheia unica pentru iconita din Font-Awesome <br/>
+          Name = numele plugin-ului <br/>
+          Key = cheia unica de identificare a plugin-ului <br/>
+          Algorithm = un string reprezentat de cod valid Javascript, avand urmatoarea forma: <br/>
+          <code>
+            (function() {  <br/>
+            return function (param) { <br/>
+            ... parse data <br/>
+            ... return data <br/>
+              }; <br/>
+            }());
+          </code>
+        </p>
+      </section>
     </section>
   </body>
 </html>

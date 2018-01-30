@@ -19,13 +19,13 @@
                 }
                 var domEl = document.getElementById('wedi-statistics-' + extension.key);
                 if (domEl) {
-                    domEl.innerHTML = '<span class="left"><i class="fa fa-address-card" aria-hidden="true"></i> ' + extension.name + '</span>' +
-                        '<span class="right"> ' + extension.data ? extension.data.length : 0 + '</span>' +
+                    domEl.innerHTML = '<span class="left"><i class="fa '+extension.icon+'"  aria-hidden="true"></i> ' + extension.name + '</span>' +
+                        '<span class="right"> ' + extension.data.length + '</span>' +
                         '<div class="clearfloat"></div>';
                 } else {
                     var item = '<div class="row" id="wedi-statistics-' + extension.key + '">' +
-                        '<span class="left"><i class="fa fa-address-card" aria-hidden="true"></i> ' + extension.name + '</span>' +
-                        '<span class="right"> ' + extension.data ? extension.data.length : 0 + '</span>' +
+                        '<span class="left"><i class="fa '+extension.icon+'" aria-hidden="true"></i> ' + extension.name + '</span>' +
+                        '<span class="right"> ' + extension.data.length+ '</span>' +
                         '<div class="clearfloat"></div>' +
                         '</div>';
                     domExtensions.innerHTML += item;
